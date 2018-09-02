@@ -1,0 +1,135 @@
+body {
+  width: 100%;
+  color:#939393;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header */
+.my-header {
+  height: 10vh;
+  background-image: url("./image/backgroundStrip_dark.png");
+  text-align: left;
+  background-position: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+  padding-left: 20%;
+}
+
+/* navigation */
+.my-navigation {
+  height: 10vh;
+  background-attachment: fixed;
+  background-color: #343a40;
+  background-position: center;
+  width: 100%;
+}
+
+/* navigation title */
+.nav-title {
+  padding-right: 20px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* navigation item 1 */
+.nav-item-1 {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* navigation item 2 */
+.nav-item-2 {
+  padding: 10px;
+  color: #909da0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: none;
+}
+/* navigation item 3 */
+.nav-item-3 {
+  padding: 10px;
+  color: #656b70;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: none;
+}
+/* flexbox container */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+/* flexbox child */
+.child {
+  flex-basis: 33.3%;
+  align-items: center;
+}
+
+/* body */
+.my-body {
+  background-image: url("./image/headphones_minimalism_pastel_122007_1920x1080_dark.png");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.my-footer {
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-image: url("./image/backgroundStrip_dark.png");
+  background-position: center;
+  width: 100%;
+}
+/* footer flex item */
+.footer-item {
+  /* flex-basis: 33.3%; */
+  align-items: center;
+  /* justify-content: space-evenly; */
+  flex: auto;
+  /* align-items: end; */
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: [header-start] 10% [header-stop navigation-start] 10% [navigation-stop body-start] auto [body-stop footer-start] 10% [footer-stop];
+  grid-template-columns: repeat(3,1fr); 
+  grid-template-areas: 
+    "header header header"
+    "navigation navigation navigation"
+    "profile-pic . content"
+    "footer-1 footer-1 footer-3";
+  align-items: center;
+  justify-items: center;
+  grid-auto-flow: column;
+  place-content: stretch;
+  height: 100vh;
+}
+
+.all-col {
+  grid-column: 1/-1;
+  align-items: center;
+}
+
+.img-thumbnail {
+  /* width: 100%; */
+  height: 60vh;
+  transform: rotate(90deg);
+}
+
+/* portfolio body */
+.portfolio-pic {
+  flex-direction: column;
+  height: 30vh;
+}
