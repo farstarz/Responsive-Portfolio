@@ -2,6 +2,7 @@ body {
   width: 100%;
   color:#939393;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9ecef;
 }
 
 /* input box */
@@ -32,9 +33,9 @@ textarea {
   width: 100%;
   color: #ffffff;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 60px;
   font-weight: 500;
-  padding-left: 20%;
+  /* padding-left: 20%; */
 }
 
 /* navigation */
@@ -102,7 +103,7 @@ textarea {
 .child2 {
   flex-basis: 100%;
   align-items: center;
-  height: 0px;
+  height: 40px;
 }
 
 /* body */
@@ -110,9 +111,10 @@ textarea {
   background-image: url("./image/headphones_minimalism_pastel_122007_1920x1080_dark.png");
   background-position: center;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   color: #090806;
   padding-bottom: 70px;
+  padding-top: 40px;
 }
 
 /* footer */
@@ -135,7 +137,7 @@ textarea {
 
 .grid {
   display: grid;
-  grid-template-rows: [header-start] 150px [header-stop navigation-start] 60px [navigation-stop body1-start] 550px [body1-stop body2-start] 0px [body2-stop body3-start] auto [body3-stop footer-start] 60px [footer-stop];
+  grid-template-rows: [navigation-start] 150px [navigation-stop header-start] minmax(60px, auto) [header-stop body1-start] 1fr [body1-stop footer-start] minmax(60px, auto) [footer-stop];
   /* grid-template-columns: repeat(1,1fr);  */
   grid-template-areas: 
     "navigation"
@@ -165,7 +167,8 @@ textarea {
 /* portfolio body */
 .portfolio-pic {
   flex-direction: column;
-  height: 30vh;
+  /* height: 30vh; */
+  width: 70%;
 }
 
 /* name id */
@@ -223,7 +226,7 @@ button:hover {
 @media (min-width: 600px) {
   .grid {
   display: grid;
-  grid-template-rows: [header-start] 60px [header-stop navigation-start] 60px [navigation-stop body-start] auto [body-stop footer-start] 10% [footer-stop];
+  grid-template-rows: [navigation-start] 60px [navigation-stop header-start] 60px [header-stop body-start] 1fr [body-stop footer-start] 60px [footer-stop];
   grid-template-columns: repeat(3,1fr); 
   grid-template-areas: 
     "header header header"
@@ -257,11 +260,14 @@ button:hover {
     background-image: url("./image/backgroundStrip_dark.png");
     background-size: auto;
     text-align: left;
+    background-repeat: no-repeat;
+    /* padding-left: 20%; */
     /* height: 2em; */
   }
   /* body */
   .my-body {
     height: 100%;
     color:#939393;
+    padding: 0px 0px;
   }
 }
