@@ -96,7 +96,8 @@ textarea {
 .child {
   flex-basis: 100%;
   align-items: center;
-
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .child2 {
   flex-basis: 100%;
@@ -110,6 +111,8 @@ textarea {
   background-position: center;
   width: 100%;
   height: 100%;
+  color: #090806;
+  padding-bottom: 70px;
 }
 
 /* footer */
@@ -132,7 +135,7 @@ textarea {
 
 .grid {
   display: grid;
-  grid-template-rows: [header-start] 150px [header-stop navigation-start] 60px [navigation-stop body1-start] 515px [body1-stop body2-start] 0px [body2-stop body3-start] auto [body3-stop footer-start] 60px [footer-stop];
+  grid-template-rows: [header-start] 150px [header-stop navigation-start] 60px [navigation-stop body1-start] 550px [body1-stop body2-start] 0px [body2-stop body3-start] auto [body3-stop footer-start] 60px [footer-stop];
   /* grid-template-columns: repeat(1,1fr);  */
   grid-template-areas: 
     "navigation"
@@ -144,7 +147,7 @@ textarea {
   justify-items: center;
   grid-auto-flow: column;
   place-content: stretch;
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -154,8 +157,8 @@ textarea {
 }
 
 .img-thumbnail {
-  /* width: 100%; */
-  height: 60vh;
+  width: 100%;
+  /* height: 400px; */
   transform: rotate(90deg);
 }
 
@@ -259,5 +262,6 @@ button:hover {
   /* body */
   .my-body {
     height: 100%;
+    color:#939393;
   }
 }
