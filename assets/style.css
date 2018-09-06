@@ -133,6 +133,7 @@ textarea {
   /* justify-content: space-evenly; */
   flex: auto;
   /* align-items: end; */
+  text-align: center;
 }
 
 .grid {
